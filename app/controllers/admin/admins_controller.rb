@@ -24,6 +24,7 @@ class Admin::AdminsController < AdminController
   end
 
   def update
+    @admin = Admin.find(params[:id])
     params = form_params.to_h
     params = params.except!(:password, :password_confirmation) if params[:password].blank?
 
@@ -35,6 +36,7 @@ class Admin::AdminsController < AdminController
   end
 
   def destroy
+    @admin = Admin.find(params[:id])
     @admin.destroy
     redirect_to admin_admins_path
   end
