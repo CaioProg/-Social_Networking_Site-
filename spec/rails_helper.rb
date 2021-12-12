@@ -63,6 +63,6 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-class Rack::Test::Uploadedef initialize(attribute)
-  attr_reader : headers
+class Rack::Test::UploadedFile
+  attr_reader :headers
 end
